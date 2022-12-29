@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "ninja-passwd"
+version = "0.1.0"
+description = ""
+authors = ["evan <evan.baird@myyahoo.com>"]
+readme = "README.md"
+packages = [{include = "ninja_passwd"}]
+
+[tool.poetry.scripts]
+ninja-pass = "ninja_passwd.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = {extras = ["all"], version = "^0.7.0"}
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.0"
+pytest-clarity = "^1.0.1"
+pytest-instafail = "^0.4.2"
+pytest-emoji = "^0.2.0"
+pytest-picked = "^0.4.6"
+pytest-xdist = "^3.1.0"
+pytest-forked = "^1.4.0"
+ipython = "^8.7.0"
+pre-commit = "^2.21.0"
+
+[tool.pytest.ini_options]
+addopts = "-rssxX -l --tb=short --strict --emoji -vvv -p no:warnings"
+xfail_strict = "True"
+markers = [
+  "smoke",
+  "fire",
+  "verify"
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
