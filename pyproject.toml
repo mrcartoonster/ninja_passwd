@@ -24,6 +24,7 @@ pytest-xdist = "^3.1.0"
 pytest-forked = "^1.4.0"
 ipython = "^8.7.0"
 pre-commit = "^2.21.0"
+black = {version = "^23.1a1", allow-prereleases = true}
 
 [tool.pytest.ini_options]
 addopts = "-rssxX -l --tb=short --strict --emoji -vvv -p no:warnings"
