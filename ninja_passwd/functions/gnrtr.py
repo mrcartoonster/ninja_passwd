@@ -7,7 +7,7 @@ import secrets
 import string
 
 # Characters
-character = "".join([string.ascii_letters, string.punctuation])
+character = "".join([string.ascii_letters, string.punctuation[:21]])
 
 
 def random_string(x: int) -> list[str]:
