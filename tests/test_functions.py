@@ -2,12 +2,12 @@
 """
 Test functions.
 """
-from ninja_passwd.functions import gnrtr
+from ninja_passwd.functions.gnrtr import random_string
 
 
 def test_generator_length():
     """
     Testing length of generato is correct.
     """
-    result = gnrtr(5)
+    result = random_string(5)
     assert len(result) == 5
